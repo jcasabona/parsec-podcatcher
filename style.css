@@ -1,10 +1,10 @@
 /*!
-Theme Name: Parsec
+Theme Name: Brunelleschi
 Theme URI: http://underscores.me/
-Author: Automattic
-Author URI: http://automattic.com/
-Description: Hi. I'm a starter theme called <code>Parsec</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
-Version: 1.0-wpcom
+Author: Joe Casabona
+Author URI: https://casabona.org/
+Description: A podcasting theme based on Underscores for the How I Built It podcast
+Version: 3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: Parsec
@@ -566,7 +566,8 @@ body {
   .home .site-content {
     max-width: 99%; }
 
-.site-header, .site-footer {
+.site-header,
+.site-footer {
   background: #333333;
   color: #FFFFFF;
   margin: 0 auto; }
@@ -623,11 +624,15 @@ body {
       .site-header .site-title a:hover, .site-header .site-title a:focus, .site-header .site-title a:active {
         color: #FCD062; }
   .site-header .latest-episode {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 30px 45px; }
-    @media (min-width: 40em) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px; }
+    @media (max-width: 50em) {
       .site-header .latest-episode {
-        margin: 0 auto; } }
+        grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 30em) {
+      .site-header .latest-episode {
+        display: block; } }
     .site-header .latest-episode h5 {
       border-bottom: 5px solid #FCD062;
       font-family: "Tinos", serif;
