@@ -6,11 +6,11 @@
 .comment-content:after,
 .site-header:before,
 .site-header:after,
-.site-content:before,
-.site-content:after,
+.site-content:not(.home-columns):before,
+.site-content:not(.home-columns):after,
 .site-footer:before,
 .site-footer:after {
-	@include clearfix;
+  @include clearfix;
 }
 
 .clear:after,
@@ -19,5 +19,5 @@
 .site-header:after,
 .site-content:after,
 .site-footer:after {
-	@include clearfix-after;
+  @include clearfix-after;
 }

@@ -1,44 +1,26 @@
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+  display: none;
 }
 
 aside.footer-widgets {
-	display: block;
-	padding-top: 25px;
-	width: 100%;
+  display: block;
+  padding-top: 25px;
+  width: 100%;
 
-	.widget {
-		background: none;
-		vertical-align: top;
+  .widget {
+    background: none;
+    vertical-align: top;
 
-		@include breakpoint( $breakpoint-2 ) {
-			display: inline-block;
-			width: 49%;
-		}
+    @include breakpoint( $breakpoint-2 ) {
+      display: inline-block;
+      width: 49%;
+    }
 
-		@include breakpoint( $breakpoint-4 ) {
-			display: inline-block;
-			margin-right: 1.5em;
-			width: 24%;
-		}
-	}
-}
-
-.home aside.widget-area {
-	background: $color-secondary;
-	@include flex();
-	flex-wrap: wrap;
-	max-width: 100%;
-	justify-content: center;
-	width: auto;
-
-	.widget {
-		margin: 10px;
-		width: 47%;
-
-		@include breakpoint(42em, 'max') {
-			width: 100%;
-		}
-	}
+    @include breakpoint( $breakpoint-4 ) {
+      display: inline-block;
+      margin-right: 1.5em;
+      width: 24%;
+    }
+  }
 }

@@ -13,9 +13,9 @@
 
 get_header(); ?>
 
-
-	<div id="primary" class="content-area one-col home">
-		<main id="main" class="site-main home-grid clearfix" role="main">
+<?php get_sidebar( 'left' ); ?>
+	<div id="primary" class="content-area home three-col">
+		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -29,4 +29,5 @@ get_header(); ?>
 		</div>
 	</div><!-- #primary -->
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

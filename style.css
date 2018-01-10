@@ -624,53 +624,32 @@ body {
       .site-header .site-title a:hover, .site-header .site-title a:focus, .site-header .site-title a:active {
         color: #FCD062; }
   .site-header .latest-episode {
+    align-items: center;
+    background: rgba(51, 51, 51, 0.95);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px; }
-    @media (max-width: 50em) {
-      .site-header .latest-episode {
-        grid-template-columns: 1fr 1fr; } }
+    grid-template-columns: 35% 40% 20%;
+    grid-gap: 10px;
+    margin: 30px; }
     @media (max-width: 30em) {
       .site-header .latest-episode {
         display: block; } }
-    .site-header .latest-episode h5 {
-      border-bottom: 5px solid #FCD062;
-      font-family: "Tinos", serif;
-      font-size: 23px;
-      font-size: 2.3rem;
-      margin-bottom: 15px;
-      text-align: left; }
+    .site-header .latest-episode a:link, .site-header .latest-episode a:visited {
+      color: #fddf94; }
+    .site-header .latest-episode a:hover, .site-header .latest-episode a:focus, .site-header .latest-episode a:active {
+      color: rgba(252, 208, 98, 0.8); }
     .site-header .latest-episode .episode {
-      background: #FFFFFF;
       margin: 15px 0;
       padding: 15px; }
     .site-header .latest-episode a.show-notes {
-      background: #FFFFFF;
-      display: inline-block;
       font-size: 26px;
       font-size: 2.6rem;
-      font-weight: bold;
-      margin: 0 auto;
-      padding: 7.5px;
-      text-align: center; }
-      .site-header .latest-episode a.show-notes:hover, .site-header .latest-episode a.show-notes:focus, .site-header .latest-episode a.show-notes:active {
-        background: #333333; }
+      font-weight: bold; }
     .site-header .latest-episode .wpp-episode-sponsors {
       margin: 0 auto;
       text-align: center; }
     .site-header .latest-episode .wpp-sponsor {
-      display: inline-block;
-      margin: 15px 0;
-      max-width: 48%;
-      vertical-align: top; }
-      .site-header .latest-episode .wpp-sponsor:first-child {
-        margin-left: 0;
-        margin-right: 7.5px; }
-      .site-header .latest-episode .wpp-sponsor:last-child {
-        margin-left: 7.5px;
-        margin-right: 0; }
-      .site-header .latest-episode .wpp-sponsor img {
-        background: #FFFFFF; }
+      display: block;
+      margin: 15px auto; }
   .site-header svg {
     height: 3em;
     vertical-align: middle; }
@@ -684,57 +663,34 @@ body {
 .site-footer .site-info {
   text-align: center; }
 
-.content-area {
+.content-area:not(.three-col) {
   margin: 0 auto;
   max-width: 95%;
   padding: 30px 0 7.5px; }
   @media (min-width: 50em) {
-    .content-area {
+    .content-area:not(.three-col) {
       display: inline-block;
       padding: 30px;
       width: 69%;
       vertical-align: top; } }
-  .content-area.one-col {
+  .content-area:not(.three-col).one-col {
     display: block;
     width: 95%; }
-    .content-area.one-col.home {
+    .content-area:not(.three-col).one-col.home {
       width: 95%; }
     @media (min-width: 50em) {
-      .content-area.one-col {
+      .content-area:not(.three-col).one-col {
         width: 85%; } }
 
 .contain {
   margin: 0 auto;
   max-width: 1300px; }
 
-aside {
-  margin: 0 auto;
-  max-width: 95%; }
-  @media (min-width: 50em) {
-    aside {
-      display: inline-block;
-      padding-top: 30px;
-      width: 30%;
-      vertical-align: top; } }
-
-.home-grid {
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; }
-  @media (max-width: 30em) {
-    .home-grid {
-      display: block; } }
-  .home-grid article {
-    margin: 10px auto;
-    width: 32%; }
-    @media (max-width: 50em) {
-      .home-grid article {
-        width: 48%; } }
-    @media (max-width: 30em) {
-      .home-grid article {
-        width: 100%; } }
+.home-columns {
+  display: grid;
+  grid-template-columns: 1fr 50% 1fr;
+  grid-gap: 30px;
+  margin: 0 30px; }
 
 /*--------------------------------------------------------------
 5.0 Navigation
@@ -911,8 +867,8 @@ a:hover, a:focus, a:active {
 .comment-content:after,
 .site-header:before,
 .site-header:after,
-.site-content:before,
-.site-content:after,
+.site-content:not(.home-columns):before,
+.site-content:not(.home-columns):after,
 .site-footer:before,
 .site-footer:after {
   content: "";
@@ -1070,22 +1026,6 @@ aside.footer-widgets {
         display: inline-block;
         margin-right: 1.5em;
         width: 24%; } }
-
-.home aside.widget-area {
-  background: #42859E;
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
-  justify-content: center;
-  width: auto; }
-  .home aside.widget-area .widget {
-    margin: 10px;
-    width: 47%; }
-    @media (max-width: 42em) {
-      .home aside.widget-area .widget {
-        width: 100%; } }
 
 /*--------------------------------------------------------------
 10.3 Comments

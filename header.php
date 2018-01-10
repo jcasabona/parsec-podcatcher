@@ -42,4 +42,4 @@ global $p_svg_path;
 
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content"> <?php //here is where I will put a class for choosing the layout ?>
+	<div id="content" class="site-content <?php if ( is_front_page() ) { echo 'home-columns'; } ?>"> <?php //here is where I will put a class for choosing the layout ?>

@@ -87,46 +87,29 @@ body {
   }
 
   .latest-episode {
+    align-items: center;
+    background: rgba($color-primary, 0.95);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 35% 40% 20%;
     grid-gap: $base-margin;
-
-    @include breakpoint($breakpoint-3, "max") {
-      grid-template-columns: 1fr 1fr;
-    }
+    margin: $padding-more;
 
     @include breakpoint($breakpoint-1, "max") {
       display: block;
     }
 
-    h5 {
-      border-bottom: 5px solid $color-accent-three;
-      font-family: $font-body;
-      @include font-size(2.3);
-      margin-bottom: $base-padding;
-      text-align: left;
+    a {
+      @include link-colors(rgba(lighten($color-accent-three, 10%), 1), rgba($color-accent-three, 0.8));
     }
 
     .episode {
-      background: $color-white;
       margin: $base-padding 0;
       padding: $base-padding;
     }
 
     a.show-notes {
-      background: $color-white;
-      display: inline-block;
       @include font-size(2.6);
       font-weight: bold;
-      margin: 0 auto;
-      padding: $padding-less;
-      text-align: center;
-
-      &:hover,
-      &:focus,
-      &:active {
-        background: $color-primary;
-      }
     }
 
     .wpp-episode-sponsors {
@@ -135,24 +118,8 @@ body {
     }
 
     .wpp-sponsor {
-      display: inline-block;
-      margin: $base-padding 0;
-      max-width: 48%;
-      vertical-align: top;
-
-      &:first-child {
-        margin-left: 0;
-        margin-right: $padding-less;
-      }
-
-      &:last-child {
-        margin-left: $padding-less;
-        margin-right: 0;
-      }
-
-      img {
-        background: $color-white;
-      }
+      display: block;
+      margin: $base-padding auto;
     }
   }
 
@@ -177,7 +144,7 @@ body {
   }
 }
 
-.content-area {
+.content-area:not(.three-col) {
   margin: $margin-center;
   max-width: $max-width-percent;
   padding: $padding-more 0 $padding-less;
@@ -208,37 +175,9 @@ body {
   max-width: $max-width-px;
 }
 
-aside {
-  margin: $margin-center;
-  max-width: $max-width-percent;
-
-  @include breakpoint( $breakpoint-3 ) {
-    display: inline-block;
-    padding-top: $padding-more;
-    width: 30%;
-    vertical-align: top;
-  }
-}
-
-.home-grid {
-  @include flex();
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  @include breakpoint($breakpoint-1, "max") {
-    display: block;
-  }
-
-  article {
-    margin: 10px auto;
-    width: 32%;
-
-    @include breakpoint($breakpoint-3, "max") {
-      width: 48%;
-    }
-
-    @include breakpoint($breakpoint-1, "max") {
-      width: 100%;
-    }
-  }
+.home-columns {
+  display: grid;
+  grid-template-columns: 1fr 50% 1fr;
+  grid-gap: $padding-more;
+  margin: 0 $padding-more;
 }

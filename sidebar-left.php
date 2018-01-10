@@ -5,13 +5,13 @@
  * @package Parsec
  */
 
-$sidebar_slug = 'sidebar-home';
+$sidebar_slug = 'sidebar-1';
 
 if ( ! is_active_sidebar( $sidebar_slug ) ) {
 	return;
 }
 ?>
 
-<aside id="right-sidebar" class="widget-area" role="complementary">
+<aside id="left-sidebar" class="widget-area" role="complementary">
 	<?php dynamic_sidebar( $sidebar_slug ); ?>
 </aside><!-- #secondary -->

@@ -30,14 +30,15 @@ function parsec_sponsor_text_links( $post_id = null ) {
 	}
 
 	$sponsor_text_links = '';
-	$format = '<a href="%1$s" title="%2$s">%2$s</a> | ';
+	$format = '<a class="wpp-sponsor" href="%1$s" title="%3$s">%2$s</a>';
 
 	foreach ( $sponsor_ids as $id ) {
 		$sponsor_text_links .= sprintf( $format,
 			esc_url( get_the_permalink( $id ) ),
+			get_the_post_thumbnail( $id, 'large' ),
 			esc_attr( get_the_title( $id ) )
 		);
 	}
 
-	return substr( $sponsor_text_links, 0, strlen( $sponsor_text_links ) - 3 );
+	return $sponsor_text_links;
 }
