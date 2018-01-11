@@ -28,8 +28,8 @@
   }
 
   .entry-footer {
-    background: $color-secondary;
-    color: $color-white;
+    background: rgba($color-secondary, 0.15);
+    color: $color-primary;
     padding: $base-padding;
 
     a {
@@ -85,18 +85,19 @@
 }
 
 .pagination {
-  margin: 10px auto;
+  margin: $padding-more auto;
   text-align: center;
 
   .page-numbers {
-    background: $color-primary;
-    color: $color-white;
+    background: rgba($color-gray-base, 0.25);
+    color: $color-primary;
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
 
     &.current {
-      background: $color-accent-two;
+      background: rgba($color-accent-two, 0.25);
+      color: $color-accent-two;
     }
 
     &:hover {

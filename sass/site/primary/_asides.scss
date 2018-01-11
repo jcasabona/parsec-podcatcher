@@ -24,3 +24,16 @@ aside.footer-widgets {
     }
   }
 }
+
+.site-content:not(.home-columns) aside.widget-area {
+  margin: $padding-more;
+  max-width: $max-width-percent;
+
+  @include breakpoint( $breakpoint-3 ) {
+    display: inline-block;
+    padding-top: $padding-more;
+    margin: 0 $padding-more;
+    width: 25%;
+    vertical-align: top;
+  }
+}

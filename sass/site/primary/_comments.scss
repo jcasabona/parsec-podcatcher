@@ -1,42 +1,41 @@
 .comments-area {
-	background: $color-white;
-	padding: $base-padding;
+  background: rgba($color-gray-base, 0.15);
+  padding: $padding-more * 2;
 }
 
 .comment-list {
-	list-style-type: none;
-	margin: 0;
+  list-style-type: none;
+  margin: 0;
 
-	li {
-		background: $color-white;
-		padding: $base-padding;
-		border-bottom: 3px solid $color-secondary;
-		margin-bottom: $base-margin;
+  li {
+    background: $color-white;
+    padding: $base-padding;
+    border-bottom: 3px solid $color-secondary;
+    margin-bottom: $base-margin;
 
-		&:nth-child(even) {
-			border-bottom: 3px solid $color-accent-two;
-		}
+    &:nth-child(even) {
+      border-bottom: 3px solid $color-accent-two;
+    }
 
-		.comment-meta {
-			margin-bottom: $padding-less;
-			padding: $padding-less;
+    .comment-meta {
+      margin-bottom: $padding-less;
+      padding: $padding-less;
 
-			img {
-				float: left;
-				margin: 6px $base-margin 0 0;
-			}
-		}
+      img {
+        float: left;
+        margin: 6px $base-margin 0 0;
+      }
+    }
 
-		.comment-awaiting-moderation {
-			@extend .alert;
-		}
-	}
+    .comment-awaiting-moderation {
+      @extend .alert;
+    }
+  }
 }
-
 
 .comment-content a {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 .bypostauthor {
-	display: block;
+  display: block;
 }

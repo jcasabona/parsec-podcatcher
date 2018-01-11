@@ -97,7 +97,7 @@ body {
     margin: $padding-more;
     padding: $base-padding;
 
-    @include breakpoint($breakpoint-1, "max") {
+    @include breakpoint($breakpoint-3, "max") {
       display: block;
     }
 
@@ -153,7 +153,7 @@ body {
   @include breakpoint( $breakpoint-3 ) {
     display: inline-block;
     padding: $padding-more;
-    width: 69%;
+    width: 65%;
     vertical-align: top;
   }
 
@@ -182,9 +182,19 @@ body {
   grid-template-columns: 68% 1fr;
   grid-gap: $padding-more * 2;
   margin: 0 $padding-more;
+
+  @include breakpoint( $breakpoint-2, "max" ) {
+    display: block;
+  }
+
+  aside.widget-area {
+    @include breakpoint( $breakpoint-2, "max" ) {
+      margin: $padding-more;
+    }
+  }
 }
 
-article {
+body:not(.page) .content-area article {
   border: 1px solid $color-gray-base;
   padding: $base-padding;
 

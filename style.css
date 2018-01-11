@@ -690,7 +690,7 @@ body {
     grid-gap: 10px;
     margin: 30px;
     padding: 15px; }
-    @media (max-width: 30em) {
+    @media (max-width: 50em) {
       .site-header .latest-episode {
         display: block; } }
     .site-header .latest-episode .episode {
@@ -729,7 +729,7 @@ body {
     .content-area:not(.three-col) {
       display: inline-block;
       padding: 30px;
-      width: 69%;
+      width: 65%;
       vertical-align: top; } }
   .content-area:not(.three-col).one-col {
     display: block;
@@ -749,15 +749,21 @@ body {
   grid-template-columns: 68% 1fr;
   grid-gap: 60px;
   margin: 0 30px; }
+  @media (max-width: 40em) {
+    .home-columns {
+      display: block; } }
+  @media (max-width: 40em) {
+    .home-columns aside.widget-area {
+      margin: 30px; } }
 
-article {
+body:not(.page) .content-area article {
   border: 1px solid #999999;
   padding: 15px; }
-  article a:link, article a:visited {
+  body:not(.page) .content-area article a:link, body:not(.page) .content-area article a:visited {
     color: #1994c2; }
-  article a:hover, article a:focus, article a:active {
+  body:not(.page) .content-area article a:hover, body:not(.page) .content-area article a:focus, body:not(.page) .content-area article a:active {
     color: #10607E; }
-  article:nth-child(even) {
+  body:not(.page) .content-area article:nth-child(even) {
     background: rgba(16, 96, 126, 0.15);
     border: 1px solid rgba(16, 96, 126, 0.5); }
 
@@ -814,13 +820,9 @@ a:hover, a:focus, a:active {
       color: #1994c2; }
     @media (max-width: 50em) {
       .main-navigation li a {
-        border-bottom: 1px solid #fddf94;
+        border-bottom: 1px solid #1682ab;
         display: block;
-        text-align: center; }
-        .main-navigation li a:link, .main-navigation li a:visited {
-          color: #FFFFFF; }
-        .main-navigation li a:hover, .main-navigation li a:focus, .main-navigation li a:active {
-          color: #999999; } }
+        text-align: center; } }
 
 /* Small menu */
 .menu-toggle {
@@ -836,15 +838,15 @@ a:hover, a:focus, a:active {
     padding: 15px 10px 0 0; }
 
   .main-navigation.toggled .nav-menu {
-    background: #333333;
+    background: rgba(153, 153, 153, 0.15);
     clear: both;
     margin: 15px 30px 20px;
     padding: 15px 20px;
     text-align: center; }
     .main-navigation.toggled .nav-menu a:link, .main-navigation.toggled .nav-menu a:visited {
-      color: #FFFFFF; }
+      color: #10607E; }
     .main-navigation.toggled .nav-menu a:hover, .main-navigation.toggled .nav-menu a:focus, .main-navigation.toggled .nav-menu a:active {
-      color: #bfbfbf; }
+      color: #2ab1e4; }
 
   .main-navigation ul {
     display: none; } }
@@ -999,8 +1001,8 @@ a:hover, a:focus, a:active {
     .hentry .entry-content p.powerpress_links {
       margin-top: 7.5px; }
   .hentry .entry-footer {
-    background: #42859E;
-    color: #FFFFFF;
+    background: rgba(66, 133, 158, 0.15);
+    color: #333333;
     padding: 15px; }
     .hentry .entry-footer a:link, .hentry .entry-footer a:visited {
       color: #FFFFFF; }
@@ -1041,16 +1043,17 @@ a:hover, a:focus, a:active {
   margin: 0 0 1.5em; }
 
 .pagination {
-  margin: 10px auto;
+  margin: 30px auto;
   text-align: center; }
   .pagination .page-numbers {
-    background: #333333;
-    color: #FFFFFF;
+    background: rgba(153, 153, 153, 0.25);
+    color: #333333;
     padding: 5px 10px;
     text-align: center;
     text-decoration: none; }
     .pagination .page-numbers.current {
-      background: #A45702; }
+      background: rgba(164, 87, 2, 0.25);
+      color: #A45702; }
     .pagination .page-numbers:hover {
       background: #4d4d4d; }
 
@@ -1078,12 +1081,23 @@ aside.footer-widgets {
         margin-right: 1.5em;
         width: 24%; } }
 
+.site-content:not(.home-columns) aside.widget-area {
+  margin: 30px;
+  max-width: 95%; }
+  @media (min-width: 50em) {
+    .site-content:not(.home-columns) aside.widget-area {
+      display: inline-block;
+      padding-top: 30px;
+      margin: 0 30px;
+      width: 25%;
+      vertical-align: top; } }
+
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
 .comments-area {
-  background: #FFFFFF;
-  padding: 15px; }
+  background: rgba(153, 153, 153, 0.15);
+  padding: 60px; }
 
 .comment-list {
   list-style-type: none;
