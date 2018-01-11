@@ -1,116 +1,106 @@
 .sticky {
-	display: block;
+  display: block;
 }
 
 .hentry {
-	background: $color-white;
-	margin: 0 0 1.5em;
+  background: $color-white;
+  margin: 0 0 1.5em;
 
-	.entry-header {
-		padding: 0 $base-padding*3;
+  .entry-header {
+    padding: 0 $base-padding*3;
 
-		a {
-				text-decoration: none;
-		}
-	}
+    a {
+      text-decoration: none;
+    }
+  }
 
-	.entry-content {
-		@include font-size(2.2);
-		padding: 0 $base-padding*2;
+  .entry-content {
+    @include font-size(1.8);
+    padding: 0 $base-padding*2;
 
-		p {
-			margin: $padding-more 0;
-		}
+    p {
+      margin: $padding-more 0;
+    }
 
-		p.powerpress_links {
-			margin-top: $padding-less;
-		}
-	}
+    p.powerpress_links {
+      margin-top: $padding-less;
+    }
+  }
 
-	.entry-footer {
-		background: $color-secondary;
-		color: $color-white;
-		padding: $base-padding;
+  .entry-footer {
+    background: $color-secondary;
+    color: $color-white;
+    padding: $base-padding;
 
-		a{
-			@include link-colors($color-white, lighten($color-gray-base, 20%));
-		}
+    a {
+      @include link-colors($color-white, lighten($color-gray-base, 20%));
+    }
+  }
 
-	}
+  :not(.home-grid) .wpp-episode-sponsors {
+    .wpp-sponsor {
+      display: inline-block;
+      margin: $base-margin;
+      max-width: 45%;
 
-	.wpp-episode-sponsors {
-		background: $color-primary;
-
-		@include breakpoint( $breakpoint-2 ) {
-			@include flex();
-			justify-content: center;
-		}
-
-		.wpp-sponsor {
-			align-self: center;
-			background: $color-white;
-			box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
-			display: inline-block;
-			margin: $base-padding;
-			padding: $padding-less;
-			text-align: center;
-			transition: 0.3s;
-			word-wrap: break-word;
-		}
-	}
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 .episode-list {
-	h3.entry-title {
-		margin-bottom: $base-padding;
-	}
+  h3.entry-title {
+    margin-bottom: $base-padding;
+  }
 }
 
 .byline,
-.updated:not(.published){
-	display: none;
+.updated:not(.published) {
+  display: none;
 }
 
 .entry-meta {
-	border-bottom: 2px solid $color-accent-three;
-	@include font-size(2);
-	margin-bottom: $base-padding;
-	padding-top: $base-padding;
+  border-bottom: 2px solid $color-accent-three;
+  @include font-size(1.6);
+  margin-bottom: $base-padding;
+  padding-top: $base-padding;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+  display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+  margin: 1.5em 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+  clear: both;
+  margin: 0 0 1.5em;
 }
 
 .pagination {
-	margin: 10px auto;
-	text-align: center;
+  margin: 10px auto;
+  text-align: center;
 
-	.page-numbers {
-		background: $color-primary;
-		color: $color-white;
-		padding: 5px 10px;
-		text-align: center;
-		text-decoration: none;
+  .page-numbers {
+    background: $color-primary;
+    color: $color-white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
 
-		&.current {
-			background: $color-accent-two;
-		}
+    &.current {
+      background: $color-accent-two;
+    }
 
-		&:hover {
-			background: lighten($color-primary, 10%);
-		}
-	}
+    &:hover {
+      background: lighten($color-primary, 10%);
+    }
+  }
 }

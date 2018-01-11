@@ -4,11 +4,11 @@ body {
 
 .site {
   @include container();
-  background: $color-background-screen;
+  background: $color-background-body;
 }
 
 .site-content {
-  background: $color-background-screen;
+  background: $color-background-body;
   max-width: $max-width-px;
   margin: $margin-center;
 
@@ -19,8 +19,8 @@ body {
 
 .site-header,
 .site-footer {
-  background: $color-primary;
-  color: $color-white;
+  background: $color-background-screen;
+  color: $color-primary;
   margin: $margin-center;
 }
 
@@ -47,8 +47,8 @@ body {
   }
 
   .top-bar {
-    background: $color-primary;
-    color: $color-white;
+    background: $color-background-screen;
+    color: $color-primary;
     padding: 0 $base-padding;
 
     &:after {
@@ -58,6 +58,7 @@ body {
   }
 
   .site-title {
+    color: $color-primary;
     float: left;
     line-height: 1em;
     margin: 0;
@@ -81,25 +82,23 @@ body {
     }
 
     a {
-      @include link-colors( $color-white, $color-accent-three );
       text-decoration: none;
     }
   }
 
   .latest-episode {
     align-items: center;
-    background: rgba($color-primary, 0.95);
+    background: rgba($color-gray-base, 0.15);
+    border-bottom: 1px solid rgba($color-gray-base, 0.7);
+    border-top: 1px solid rgba($color-gray-base, 0.7);
     display: grid;
-    grid-template-columns: 35% 40% 20%;
+    grid-template-columns: 30% 45% 1fr;
     grid-gap: $base-margin;
     margin: $padding-more;
+    padding: $base-padding;
 
     @include breakpoint($breakpoint-1, "max") {
       display: block;
-    }
-
-    a {
-      @include link-colors(rgba(lighten($color-accent-three, 10%), 1), rgba($color-accent-three, 0.8));
     }
 
     .episode {
@@ -108,18 +107,19 @@ body {
     }
 
     a.show-notes {
+      display: block;
       @include font-size(2.6);
       font-weight: bold;
+      padding-top: $padding-more;
     }
 
     .wpp-episode-sponsors {
-      margin: 0 auto;
-      text-align: center;
+      text-align: right;
     }
 
     .wpp-sponsor {
       display: block;
-      margin: $base-padding auto;
+      padding: $base-padding 0;
     }
   }
 
@@ -136,10 +136,11 @@ body {
 
 .site-footer {
   a {
-    @include link-colors( $color-accent-three, $color-secondary );
+    @include link-colors( $color-accent, $color-secondary );
   }
 
   .site-info {
+    padding: $base-padding;
     text-align: center;
   }
 }
@@ -176,8 +177,23 @@ body {
 }
 
 .home-columns {
+  //@TODO: Responsive!
   display: grid;
-  grid-template-columns: 1fr 50% 1fr;
-  grid-gap: $padding-more;
+  grid-template-columns: 68% 1fr;
+  grid-gap: $padding-more * 2;
   margin: 0 $padding-more;
+}
+
+article {
+  border: 1px solid $color-gray-base;
+  padding: $base-padding;
+
+  a {
+    @include link-colors( lighten($color-accent, 15%), $color-accent );
+  }
+
+  &:nth-child(even) {
+    background: rgba($color-accent, 0.15);
+    border: 1px solid rgba($color-accent, 0.5);
+  }
 }

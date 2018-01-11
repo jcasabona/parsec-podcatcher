@@ -1,39 +1,29 @@
 .widget {
-	background: $color-white;
-	margin: $base-margin 0 $padding-more*2 0;
+  margin: $base-margin 0 $padding-more*2 0;
 
-	.widget-title {
-		background: $color-accent-two;
-		color: $color-white;
-		@include font-size(2.6);
-		padding: $base-padding;
-		margin-bottom: $base-margin;
+  .widget-title {
+    border-bottom: 1px solid $color-accent-two;
+    @include font-size(2.2);
 
-		footer & {
-			background: none;
-			padding: $padding-less;
-		}
-	}
+    footer & {
+      background: none;
+      padding: $padding-less;
+    }
+  }
 
+  @include breakpoint( $breakpoint-2 ) {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
-	@include breakpoint( $breakpoint-2 ) {
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		& > div {
-			padding: $base-padding;
-		}
-	}
-
-	/* Make sure select elements fit in widgets */
-	select {
-		max-width: 100%;
-	}
+  /* Make sure select elements fit in widgets */
+  select {
+    max-width: 100%;
+  }
 }
 
 /* Search widget */
 .widget_search .search-submit {
-	display: none;
+  display: none;
 }

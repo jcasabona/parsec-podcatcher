@@ -105,6 +105,16 @@ function parsec_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name'          => __( 'Left Sidebar', 'parsec' ),
+		'id'            => 'sidebar-2',
+		'description'   => '',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
 		'name'          => __( 'Home Sidebar', 'parsec' ),
 		'id'            => 'sidebar-home',
 		'description'   => '',
@@ -130,7 +140,7 @@ add_action( 'widgets_init', 'parsec_widgets_init' );
  * Enqueue scripts and styles.
  */
 function parsec_scripts() {
-	wp_enqueue_style( 'google-web-fonts', '//fonts.googleapis.com/css?family=Playfair+Display:900|Tinos:400+700' );
+	wp_enqueue_style( 'google-web-fonts', '//fonts.googleapis.com/css?family=Merriweather+Sans:400,400i,700' );
 	wp_enqueue_style( 'parsec-style', get_stylesheet_uri(), array( 'google-web-fonts' ) );
 
 	wp_enqueue_script( 'parsec-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );

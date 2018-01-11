@@ -13,7 +13,6 @@
 
 get_header(); ?>
 
-<?php get_sidebar( 'left' ); ?>
 	<div id="primary" class="content-area home three-col">
 		<main id="main" class="site-main" role="main">
 

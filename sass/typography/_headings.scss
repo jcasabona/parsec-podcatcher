@@ -1,13 +1,18 @@
-h1, h2, h3, h4, h5, h6 {
-	font-family: $font-display;
-	font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-display;
+  font-weight: normal;
 }
 
 $start: $font-size-heading-base;
-@each $h in h1, h2, h3, h4, h5, h6{
-    #{$h} {
-      @include font-size($start);
-      }
-
-      $start: $start - 1;
+@each $h in h1, h2, h3, h4, h5, h6 {
+  #{$h} {
+    @include font-size($start);
   }
+
+  $start: $start - 0.75;
+}
