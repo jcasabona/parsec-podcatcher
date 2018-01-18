@@ -15,8 +15,8 @@
 			echo do_shortcode( '[audio src="'. esc_url( $episode_data['url'] ) .'"]' );
 		?>
 		<p><a class="show-notes" href="<?php echo get_the_permalink( $latest_episode_id ); ?>">View Show Notes</a></p>
-	</div>
-	<div class="wpp-episode-sponsors">
-		<?php echo parsec_sponsor_text_links( $latest_episode_id ); ?>	
+		<div class="wpp-episode-sponsors">
+			<?php echo parsec_sponsor_text_links( $latest_episode_id ); ?>	
+		</div>
 	</div>
 </div>

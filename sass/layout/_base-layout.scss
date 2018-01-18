@@ -87,15 +87,13 @@ body {
   }
 
   .latest-episode {
-    align-items: center;
     background: rgba($color-gray-base, 0.15);
     border-bottom: 1px solid rgba($color-gray-base, 0.7);
     border-top: 1px solid rgba($color-gray-base, 0.7);
     display: grid;
-    grid-template-columns: 30% 45% 1fr;
+    grid-template-columns: 1fr 62%;
     grid-gap: $base-margin;
     margin: $padding-more;
-    padding: $base-padding;
 
     @include breakpoint($breakpoint-3, "max") {
       display: block;
@@ -110,16 +108,25 @@ body {
       display: block;
       @include font-size(2.6);
       font-weight: bold;
-      padding-top: $padding-more;
+      padding-top: $base-padding;
     }
 
     .wpp-episode-sponsors {
-      text-align: right;
-    }
+      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: ($base-margin * 1.5);
 
-    .wpp-sponsor {
-      display: block;
-      padding: $base-padding 0;
+      @include breakpoint($breakpoint-1, "max") {
+        display: block;
+      }
+
+      .wpp-sponsor {
+        @include breakpoint($breakpoint-1, "max") {
+          display: block;
+          margin: $padding-more 0;
+        }
+      }
     }
   }
 
@@ -189,7 +196,7 @@ body {
 
   aside.widget-area {
     @include breakpoint( $breakpoint-2, "max" ) {
-      margin: $padding-more;
+      margin: 0;
     }
   }
 }

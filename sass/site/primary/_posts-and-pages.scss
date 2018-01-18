@@ -43,6 +43,11 @@
       margin: $base-margin;
       max-width: 45%;
 
+      @include breakpoint($breakpoint-2, "max") {
+        max-width: 100%;
+        width: auto;
+      }
+
       &:first-child {
         margin-left: 0;
       }
@@ -102,6 +107,38 @@
 
     &:hover {
       background: lighten($color-primary, 10%);
+    }
+  }
+}
+
+.wwp-transcript-text {
+  table {
+    tr {
+      td {
+        padding: $padding-less $base-padding;
+      }
+
+      td:first-child {
+        background: rgba($color-gray-base, 0.1);
+        font-weight: bold;
+      }
+    }
+  }
+}
+@include breakpoint($breakpoint-1, "max") {
+  .wwp-transcript-text {
+    table {
+      display: block;
+      tr {
+        display: block;
+        td {
+          display: block;
+
+          &:first-child {
+            background: none;
+          }
+        }
+      }
     }
   }
 }

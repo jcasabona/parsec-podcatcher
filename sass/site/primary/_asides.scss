@@ -8,19 +8,19 @@ aside.footer-widgets {
   padding-top: 25px;
   width: 100%;
 
+  @include breakpoint( $breakpoint-2 ) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $padding-more;
+  }
+
   .widget {
     background: none;
+    padding: 0 $padding-more;
     vertical-align: top;
 
     @include breakpoint( $breakpoint-2 ) {
-      display: inline-block;
-      width: 49%;
-    }
-
-    @include breakpoint( $breakpoint-4 ) {
-      display: inline-block;
-      margin-right: 1.5em;
-      width: 24%;
+      padding: $padding-more;
     }
   }
 }
@@ -32,8 +32,12 @@ aside.footer-widgets {
   @include breakpoint( $breakpoint-3 ) {
     display: inline-block;
     padding-top: $padding-more;
-    margin: 0 $padding-more;
+    margin: 0 $base-margin;
     width: 25%;
     vertical-align: top;
+  }
+
+  .wpp-sponsor:first-child {
+    margin-top: $base-margin;
   }
 }

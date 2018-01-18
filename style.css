@@ -681,15 +681,13 @@ body {
     .site-header .site-title a {
       text-decoration: none; }
   .site-header .latest-episode {
-    align-items: center;
     background: rgba(153, 153, 153, 0.15);
     border-bottom: 1px solid rgba(153, 153, 153, 0.7);
     border-top: 1px solid rgba(153, 153, 153, 0.7);
     display: grid;
-    grid-template-columns: 30% 45% 1fr;
+    grid-template-columns: 1fr 62%;
     grid-gap: 10px;
-    margin: 30px;
-    padding: 15px; }
+    margin: 30px; }
     @media (max-width: 50em) {
       .site-header .latest-episode {
         display: block; } }
@@ -701,12 +699,19 @@ body {
       font-size: 26px;
       font-size: 2.6rem;
       font-weight: bold;
-      padding-top: 30px; }
+      padding-top: 15px; }
     .site-header .latest-episode .wpp-episode-sponsors {
-      text-align: right; }
-    .site-header .latest-episode .wpp-sponsor {
-      display: block;
-      padding: 15px 0; }
+      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 15px; }
+      @media (max-width: 30em) {
+        .site-header .latest-episode .wpp-episode-sponsors {
+          display: block; } }
+      @media (max-width: 30em) {
+        .site-header .latest-episode .wpp-episode-sponsors .wpp-sponsor {
+          display: block;
+          margin: 30px 0; } }
   .site-header svg {
     height: 3em;
     vertical-align: middle; }
@@ -754,7 +759,7 @@ body {
       display: block; } }
   @media (max-width: 40em) {
     .home-columns aside.widget-area {
-      margin: 30px; } }
+      margin: 0; } }
 
 body:not(.page) .content-area article {
   border: 1px solid #999999;
@@ -1012,6 +1017,10 @@ a:hover, a:focus, a:active {
     display: inline-block;
     margin: 10px;
     max-width: 45%; }
+    @media (max-width: 40em) {
+      .hentry :not(.home-grid) .wpp-episode-sponsors .wpp-sponsor {
+        max-width: 100%;
+        width: auto; } }
     .hentry :not(.home-grid) .wpp-episode-sponsors .wpp-sponsor:first-child {
       margin-left: 0; }
 
@@ -1057,6 +1066,21 @@ a:hover, a:focus, a:active {
     .pagination .page-numbers:hover {
       background: #4d4d4d; }
 
+.wwp-transcript-text table tr td {
+  padding: 7.5px 15px; }
+.wwp-transcript-text table tr td:first-child {
+  background: rgba(153, 153, 153, 0.1);
+  font-weight: bold; }
+
+@media (max-width: 30em) {
+  .wwp-transcript-text table {
+    display: block; }
+    .wwp-transcript-text table tr {
+      display: block; }
+      .wwp-transcript-text table tr td {
+        display: block; }
+        .wwp-transcript-text table tr td:first-child {
+          background: none; } }
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
@@ -1068,18 +1092,18 @@ aside.footer-widgets {
   display: block;
   padding-top: 25px;
   width: 100%; }
+  @media (min-width: 40em) {
+    aside.footer-widgets {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 30px; } }
   aside.footer-widgets .widget {
     background: none;
+    padding: 0 30px;
     vertical-align: top; }
     @media (min-width: 40em) {
       aside.footer-widgets .widget {
-        display: inline-block;
-        width: 49%; } }
-    @media (min-width: 60em) {
-      aside.footer-widgets .widget {
-        display: inline-block;
-        margin-right: 1.5em;
-        width: 24%; } }
+        padding: 30px; } }
 
 .site-content:not(.home-columns) aside.widget-area {
   margin: 30px;
@@ -1088,9 +1112,11 @@ aside.footer-widgets {
     .site-content:not(.home-columns) aside.widget-area {
       display: inline-block;
       padding-top: 30px;
-      margin: 0 30px;
+      margin: 0 10px;
       width: 25%;
       vertical-align: top; } }
+  .site-content:not(.home-columns) aside.widget-area .wpp-sponsor:first-child {
+    margin-top: 10px; }
 
 /*--------------------------------------------------------------
 10.3 Comments
